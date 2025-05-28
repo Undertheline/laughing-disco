@@ -1,0 +1,58 @@
+#include <stdio.h>
+
+int main() {
+    int usuario;
+    int programa = 1;
+
+    while (programa == 1) {
+        printf("Escreve ai rapaz : ");
+        scanf("%d", &usuario);
+
+        switch (usuario) {
+            case 0:
+                programa = 0;  // Sai do loop
+                printf("Tchau, volte sempre!\n");
+                break;
+            case 1:
+                printf("Boa amigao, aproveite o croissant!!1 \"Esse aqui é croissanto pra qualquer hora!\"\n");
+                break;
+            case 2:
+                printf("Boa amigao, aproveite a broa de milho!!1 \"Broa que não broa, só alegria!\"\n");
+                break;
+            case 3:
+                printf("Boa amigao, aproveite o sonho!!1 \"Sonho de padaria, não de princesa!\"\n");
+                break;
+            case 4:
+                printf("Boa amigao, aproveite o bolo de fubá!!1 \"Fubá que é sucesso, nem precisa de manteiga!\"\n");
+                break;
+            case 5:
+                printf("Boa amigao, aproveite a coxinha!!1 \"Coxinha pra quem quer ser feliz!\"\n");
+                break;
+            case 6:
+                printf("Boa amigao, aproveite o pão de queijo!!1 \"Mineiro que se preze não dispensa pão de queijo!\"\n");
+                break;
+            case 7:
+                printf("Boa amigao, aproveite a rosquinha!!1 \"Rosquinha doce, pra adoçar o dia!\"\n");
+                break;
+            case 8:
+                printf("Boa amigao, aproveite o biscoito!!1 \"Biscoito que é biscoito, ninguém recusa!\"\n");
+                break;
+            case 9:
+                printf("Boa amigao, aproveite a empada!!1 \"Empada recheada, alegria garantida!\"\n");
+                break;
+            case 10:
+                printf("Boa amigao, aproveite o pão francês!!1 \"Pão francês, orgulho nacional!\"\n");
+                break;
+            case 11:
+                printf("Boa amigao, aproveite o pão integral!!1 \"Integral pra manter a forma, sem perder o sabor!\"\n");
+                break;
+            default:
+                printf("Produto não disponível, mas a amizade é de primeira! :thumbs_up:\n");
+                break;
+        }
+    }
+
+    printf("Boa noite, tenha um bom dia!!1 Volte sempre\n");
+
+    return 0;
+}
