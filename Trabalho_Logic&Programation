@@ -4,64 +4,104 @@ int main() {
     int usuario;
     int programa = 1;
 
+float Croissant = 6.50;
+float Broa_de_Milho = 4.00;
+float Sonho = 5.50;
+float Bolo_de_Fuba = 7.00;
+float Coxinha = 6.00;
+float Pao_de_Queijo = 5.00;
+float Rosquinha = 3.50;
+float Biscoito = 4.50;
+float Empada = 6.50;
+float Pao_Frances = 1.20;
+float Pao_Integral = 2.50;
+
+int quantidadeCroissant = 0;
+int quantidadeBroa_de_Milho = 0;
+int quantidadeSonho = 0;
+int quantidadeBolo_de_Fuba = 0;
+int quantidadeCoxinha = 0;
+int quantidadePao_de_Queijo = 0;
+int quantidadeRosquinha = 0;
+int quantidadeBiscoito = 0;
+int quantidadeEmpada = 0;
+int quantidadePao_Frances = 0;
+int quantidadePao_Integral = 0;
+
+
+    printf("Lista de Produtos : \n");
+            printf("Croissant - Id: 1 - Preço: R$ %.2f \n", Croissant);
+            printf("Broa de Milho - Id: 2 - Preço: R$ %.2f \n", Broa_de_Milho);
+            printf("Sonho - Id: 3 - Preço: R$ %.2f \n", Sonho);
+            printf("Bolo de Fubá - Id: 4 - Preço: R$ %.2f \n", Bolo_de_Fuba);
+            printf("Coxinha - Id: 5 - Preço: R$ %.2f \n", Coxinha);
+            printf("Pão de Queijo - Id: 6 - Preço: R$ %.2f \n", Pao_de_Queijo);
+            printf("Rosquinha - Id: 7 - Preço: R$ %.2f \n", Rosquinha);
+            printf("Biscoito - Id: 8 - Preço: R$ %.2f \n", Biscoito);
+            printf("Empada - Id: 9 - Preço: R$ %.2f \n", Empada);
+            printf("Pão Francês - Id: 10 - Preço: R$ %.2f \n", Pao_Frances);
+            printf("Pão Integral - Id: 11 - Preço: R$ %.2f \n", Pao_Integral);
     while (programa == 1) {
-        printf("Lista de Produtos : \n");
-        printf("Croissant - Id: 1 - Preço: R$ 6,50\n");
-            printf("Broa de Milho - Id: 2 - Preço: R$ 4,00\n");
-            printf("Sonho - Id: 3 - Preço: R$ 5,50\n");
-            printf("Bolo de Fubá - Id: 4 - Preço: R$ 7,00\n");
-            printf("Coxinha - Id: 5 - Preço: R$ 6,00\n");
-            printf("Pão de Queijo - Id: 6 - Preço: R$ 5,00\n");
-            printf("Rosquinha - Id: 7 - Preço: R$ 3,50\n");
-            printf("Biscoito - Id: 8 - Preço: R$ 4,50\n");
-            printf("Empada - Id: 9 - Preço: R$ 6,50\n");
-            printf("Pão Francês - Id: 10 - Preço: R$ 1,20\n");
-            printf("Pão Integral - Id: 11 - Preço: R$ 2,50\n");
         printf("Escreve ai rapaz : ");
         scanf("%d", &usuario);
 
         switch (usuario) {
-            case 0:
-                programa = 0;  // Sai do loop
-                printf("Tchau, volte sempre!\n");
-                break;
-            case 1:
-                printf("Boa amigao, aproveite o croissant!!1 \"Esse aqui é croissanto pra qualquer hora!\"\n");
-                break;
-            case 2:
-                printf("Boa amigao, aproveite a broa de milho!!1 \"Broa que não broa, só alegria!\"\n");
-                break;
-            case 3:
-                printf("Boa amigao, aproveite o sonho!!1 \"Sonho de padaria, não de princesa!\"\n");
-                break;
-            case 4:
-                printf("Boa amigao, aproveite o bolo de fubá!!1 \"Fubá que é sucesso, nem precisa de manteiga!\"\n");
-                break;
-            case 5:
-                printf("Boa amigao, aproveite a coxinha!!1 \"Coxinha pra quem quer ser feliz!\"\n");
-                break;
-            case 6:
-                printf("Boa amigao, aproveite o pão de queijo!!1 \"Mineiro que se preze não dispensa pão de queijo!\"\n");
-                break;
-            case 7:
-                printf("Boa amigao, aproveite a rosquinha!!1 \"Rosquinha doce, pra adoçar o dia!\"\n");
-                break;
-            case 8:
-                printf("Boa amigao, aproveite o biscoito!!1 \"Biscoito que é biscoito, ninguém recusa!\"\n");
-                break;
-            case 9:
-                printf("Boa amigao, aproveite a empada!!1 \"Empada recheada, alegria garantida!\"\n");
-                break;
-            case 10:
-                printf("Boa amigao, aproveite o pão francês!!1 \"Pão francês, orgulho nacional!\"\n");
-                break;
-            case 11:
-                printf("Boa amigao, aproveite o pão integral!!1 \"Integral pra manter a forma, sem perder o sabor!\"\n");
-                break;
-            default:
-                printf("Produto não disponível, mas a amizade é de primeira! :thumbs_up:\n");
-                break;
-        }
+    case 0:
+        programa = 0;  // Sai do loop
+        printf("Tchau, volte sempre!\n");
+        break;
+    case 1:
+        quantidadeCroissant++;
+        printf("Boa amigao, aproveite o croissant!!1 \"Esse aqui é croissanto pra qualquer hora!\"\n");
+        break;
+    case 2:
+        quantidadeBroa_de_Milho++;
+        printf("Boa amigao, aproveite a broa de milho!!1 \"Broa que não broa, só alegria!\"\n");
+        break;
+    case 3:
+        quantidadeSonho++;
+        printf("Boa amigao, aproveite o sonho!!1 \"Sonho de padaria, não de princesa!\"\n");
+        break;
+    case 4:
+        quantidadeBolo_de_Fuba++;
+        printf("Boa amigao, aproveite o bolo de fubá!!1 \"Fubá que é sucesso, nem precisa de manteiga!\"\n");
+        break;
+    case 5:
+        quantidadeCoxinha++;
+        printf("Boa amigao, aproveite a coxinha!!1 \"Coxinha pra quem quer ser feliz!\"\n");
+        break;
+    case 6:
+        quantidadePao_de_Queijo++;
+        printf("Boa amigao, aproveite o pão de queijo!!1 \"Mineiro que se preze não dispensa pão de queijo!\"\n");
+        break;
+    case 7:
+        quantidadeRosquinha++;
+        printf("Boa amigao, aproveite a rosquinha!!1 \"Rosquinha doce, pra adoçar o dia!\"\n");
+        break;
+    case 8:
+        quantidadeBiscoito++;
+        printf("Boa amigao, aproveite o biscoito!!1 \"Biscoito que é biscoito, ninguém recusa!\"\n");
+        break;
+    case 9:
+        quantidadeEmpada++;
+        printf("Boa amigao, aproveite a empada!!1 \"Empada recheada, alegria garantida!\"\n");
+        break;
+    case 10:
+        quantidadePao_Frances++;
+        printf("Boa amigao, aproveite o pão francês!!1 \"Pão francês, orgulho nacional!\"\n");
+        break;
+    case 11:
+        quantidadePao_Integral++;
+        printf("Boa amigao, aproveite o pão integral!!1 \"Integral pra manter a forma, sem perder o sabor!\"\n");
+        break;
+    default:
+        printf("Produto não disponível, mas a amizade é de primeira! :thumbs_up:\n");
+        break;
+}
+      if (quantidadeCroissant > 0 || quantidadeBroa_de_Milho > 0 || quantidadeSonho > 0 || quantidadeBolo_de_Fuba > 0 || quantidadeCoxinha > 0 || quantidadePao_de_Queijo > 0 || quantidadeRosquinha > 0 || quantidadeBiscoito > 0 || quantidadeEmpada > 0 || quantidadePao_Frances > 0 || quantidadePao_Integral > 0) {
+    printf("Carrinho possui itens\n");
+}
+
     }
 
     printf("Boa noite, tenha um bom dia!!1 Volte sempre\n");
