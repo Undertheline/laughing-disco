@@ -5,6 +5,18 @@ int main() {
     int programa = 1;
 
     while (programa == 1) {
+        printf("Lista de Produtos : \n");
+        printf("Croissant - Id: 1 - Preço: R$ 6,50\n");
+            printf("Broa de Milho - Id: 2 - Preço: R$ 4,00\n");
+            printf("Sonho - Id: 3 - Preço: R$ 5,50\n");
+            printf("Bolo de Fubá - Id: 4 - Preço: R$ 7,00\n");
+            printf("Coxinha - Id: 5 - Preço: R$ 6,00\n");
+            printf("Pão de Queijo - Id: 6 - Preço: R$ 5,00\n");
+            printf("Rosquinha - Id: 7 - Preço: R$ 3,50\n");
+            printf("Biscoito - Id: 8 - Preço: R$ 4,50\n");
+            printf("Empada - Id: 9 - Preço: R$ 6,50\n");
+            printf("Pão Francês - Id: 10 - Preço: R$ 1,20\n");
+            printf("Pão Integral - Id: 11 - Preço: R$ 2,50\n");
         printf("Escreve ai rapaz : ");
         scanf("%d", &usuario);
 
