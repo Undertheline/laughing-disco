@@ -28,7 +28,9 @@ int quantidadeBiscoito = 0;
 int quantidadeEmpada = 0;
 int quantidadePao_Frances = 0;
 int quantidadePao_Integral = 0;
+int cadastro = 0;
 
+int resposta;
 
     printf("Lista de Produtos : \n");
             printf("Croissant - Id: 1 - Preço: R$ %.2f \n", Croissant);
@@ -43,12 +45,13 @@ int quantidadePao_Integral = 0;
             printf("Pão Francês - Id: 10 - Preço: R$ %.2f \n", Pao_Frances);
             printf("Pão Integral - Id: 11 - Preço: R$ %.2f \n", Pao_Integral);
     while (programa == 1) {
-        printf("Escreve ai rapaz : ");
+        printf("Digite o Id do produto para adicionalo ao carrinho.\n");
+        printf("Digite 100 para finalizar a compra.\n Digite 0 para sair da aplicação.");
         scanf("%d", &usuario);
 
         switch (usuario) {
     case 0:
-        programa = 0;  // Sai do loop
+        programa = 0; 
         printf("Tchau, volte sempre!\n");
         break;
     case 1:
@@ -154,13 +157,24 @@ if (quantidadePao_Integral > 0) {
     printf("Pao_Integral : %i , Valor R$ : %.2f \n", quantidadePao_Integral, (Pao_Integral * quantidadePao_Integral));
 }
 if (valortotal > 0){
-    printf("Valor no Carrinho : R$ %.2f \n", valortotal);
+    printf("Possui cadastro em nossa padaria? Y = 1/N = 0\n");
+    scanf("%i", &resposta);
+    printf("%i", resposta);
+    programa = 0;
+    break;
+} 
 }
-
+switch (resposta){
+    case 0:
+    printf("Valor no Carrinho : R$ %.2f \n", valortotal);
+    break;
+    case 1:
+    (valortotal = valortotal * 0.9);
+    printf("Valor no Carrinho : R$ %.2f \n", valortotal);
+    break;
 }
 
     }
-
     printf("Boa noite, tenha um bom dia!!1 Volte sempre\n");
 
     return 0;
