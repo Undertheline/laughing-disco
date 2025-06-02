@@ -15,6 +15,7 @@ float Biscoito = 4.50;
 float Empada = 6.50;
 float Pao_Frances = 1.20;
 float Pao_Integral = 2.50;
+float valortotal = 0;
 
 int quantidadeCroissant = 0;
 int quantidadeBroa_de_Milho = 0;
@@ -52,54 +53,110 @@ int quantidadePao_Integral = 0;
         break;
     case 1:
         quantidadeCroissant++;
+        valortotal = valortotal + Croissant;
         printf("Boa amigao, aproveite o croissant!!1 \"Esse aqui é croissanto pra qualquer hora!\"\n");
         break;
     case 2:
         quantidadeBroa_de_Milho++;
+        valortotal = valortotal + Broa_de_Milho;
         printf("Boa amigao, aproveite a broa de milho!!1 \"Broa que não broa, só alegria!\"\n");
         break;
     case 3:
         quantidadeSonho++;
+        valortotal = valortotal + Sonho;
         printf("Boa amigao, aproveite o sonho!!1 \"Sonho de padaria, não de princesa!\"\n");
         break;
     case 4:
         quantidadeBolo_de_Fuba++;
+        valortotal = valortotal + Bolo_de_Fuba;
         printf("Boa amigao, aproveite o bolo de fubá!!1 \"Fubá que é sucesso, nem precisa de manteiga!\"\n");
         break;
     case 5:
         quantidadeCoxinha++;
+        valortotal = valortotal + Coxinha;
         printf("Boa amigao, aproveite a coxinha!!1 \"Coxinha pra quem quer ser feliz!\"\n");
         break;
     case 6:
         quantidadePao_de_Queijo++;
+        valortotal = valortotal + Pao_de_Queijo;
         printf("Boa amigao, aproveite o pão de queijo!!1 \"Mineiro que se preze não dispensa pão de queijo!\"\n");
         break;
     case 7:
         quantidadeRosquinha++;
+        valortotal = valortotal + Rosquinha;
         printf("Boa amigao, aproveite a rosquinha!!1 \"Rosquinha doce, pra adoçar o dia!\"\n");
         break;
     case 8:
-        quantidadeBiscoito++;
+        quantidadeBiscoito++;valortotal = valortotal + Biscoito;
         printf("Boa amigao, aproveite o biscoito!!1 \"Biscoito que é biscoito, ninguém recusa!\"\n");
         break;
     case 9:
         quantidadeEmpada++;
+        valortotal = valortotal + Empada;
         printf("Boa amigao, aproveite a empada!!1 \"Empada recheada, alegria garantida!\"\n");
         break;
     case 10:
         quantidadePao_Frances++;
+        valortotal = valortotal + Pao_Frances;
         printf("Boa amigao, aproveite o pão francês!!1 \"Pão francês, orgulho nacional!\"\n");
         break;
     case 11:
         quantidadePao_Integral++;
+        valortotal = valortotal + Pao_Integral;
         printf("Boa amigao, aproveite o pão integral!!1 \"Integral pra manter a forma, sem perder o sabor!\"\n");
         break;
     default:
         printf("Produto não disponível, mas a amizade é de primeira! :thumbs_up:\n");
         break;
-}
-      if (quantidadeCroissant > 0 || quantidadeBroa_de_Milho > 0 || quantidadeSonho > 0 || quantidadeBolo_de_Fuba > 0 || quantidadeCoxinha > 0 || quantidadePao_de_Queijo > 0 || quantidadeRosquinha > 0 || quantidadeBiscoito > 0 || quantidadeEmpada > 0 || quantidadePao_Frances > 0 || quantidadePao_Integral > 0) {
+     case 100:
     printf("Carrinho possui itens\n");
+   if (quantidadeCroissant > 0) {
+    printf("Croissant : %i , Valor R$ : %.2f \n", quantidadeCroissant, (Croissant * quantidadeCroissant));
+}
+
+if (quantidadeBroa_de_Milho > 0) {
+    printf("Broa_de_Milho : %i , Valor R$ : %.2f \n", quantidadeBroa_de_Milho, (Broa_de_Milho * quantidadeBroa_de_Milho));
+}
+
+if (quantidadeSonho > 0) {
+    printf("Sonho : %i , Valor R$ : %.2f \n", quantidadeSonho, (Sonho * quantidadeSonho));
+}
+
+if (quantidadeBolo_de_Fuba > 0) {
+    printf("Bolo_de_Fuba : %i , Valor R$ : %.2f \n", quantidadeBolo_de_Fuba, (Bolo_de_Fuba * quantidadeBolo_de_Fuba));
+}
+
+if (quantidadeCoxinha > 0) {
+    printf("Coxinha : %i , Valor R$ : %.2f \n", quantidadeCoxinha, (Coxinha * quantidadeCoxinha));
+}
+
+if (quantidadePao_de_Queijo > 0) {
+    printf("Pao_de_Queijo : %i , Valor R$ : %.2f \n", quantidadePao_de_Queijo, (Pao_de_Queijo * quantidadePao_de_Queijo));
+}
+
+if (quantidadeRosquinha > 0) {
+    printf("Rosquinha : %i , Valor R$ : %.2f \n", quantidadeRosquinha, (Rosquinha * quantidadeRosquinha));
+}
+
+if (quantidadeBiscoito > 0) {
+    printf("Biscoito : %i , Valor R$ : %.2f \n", quantidadeBiscoito, (Biscoito * quantidadeBiscoito));
+}
+
+if (quantidadeEmpada > 0) {
+    printf("Empada : %i , Valor R$ : %.2f \n", quantidadeEmpada, (Empada * quantidadeEmpada));
+}
+
+if (quantidadePao_Frances > 0) {
+    printf("Pao_Frances : %i , Valor R$ : %.2f \n", quantidadePao_Frances, (Pao_Frances * quantidadePao_Frances));
+}
+
+if (quantidadePao_Integral > 0) {
+    printf("Pao_Integral : %i , Valor R$ : %.2f \n", quantidadePao_Integral, (Pao_Integral * quantidadePao_Integral));
+}
+if (valortotal > 0){
+    printf("Valor no Carrinho : R$ %.2f \n", valortotal);
+}
+
 }
 
     }
