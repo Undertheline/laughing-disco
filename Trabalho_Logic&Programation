@@ -3,7 +3,7 @@
 int main() {
     int usuario;
     int programa = 1;
-
+                            // Nomeação das Variaveis
 float Croissant = 6.50;
 float Broa_de_Milho = 4.00;
 float Sonho = 5.50;
@@ -32,7 +32,7 @@ int cadastro = 0;
 
 int resposta;
 
-    printf("Lista de Produtos : \n");
+    printf("Lista de Produtos : \n");       //Print da lista de produtos
             printf("Croissant - Id: 1 - Preço: R$ %.2f \n", Croissant);
             printf("Broa de Milho - Id: 2 - Preço: R$ %.2f \n", Broa_de_Milho);
             printf("Sonho - Id: 3 - Preço: R$ %.2f \n", Sonho);
@@ -44,23 +44,23 @@ int resposta;
             printf("Empada - Id: 9 - Preço: R$ %.2f \n", Empada);
             printf("Pão Francês - Id: 10 - Preço: R$ %.2f \n", Pao_Frances);
             printf("Pão Integral - Id: 11 - Preço: R$ %.2f \n", Pao_Integral);
-    while (programa == 1) {
+    while (programa == 1) { //enquanto o programa estiver em uso, o loop permanece ativo
         printf("Digite o Id do produto para adicionar ao carrinho.\n");
         printf("Digite 100 para finalizar a compra.\n Digite 0 para sair da aplicação.");
         scanf("%d", &usuario);
 
         switch (usuario) {
-    case 0:
+    case 0: //caso o usuario digite 0, o programa é encerrado  
         programa = 0; 
         printf("Tchau, volte sempre!\n");
         break;
-    case 1:
-        quantidadeCroissant++;
-        valortotal = valortotal + Croissant;
+    case 1:                         // Cada produto tem seu id que é informado na tabela de produtos
+        quantidadeCroissant++;          // a quantidade do Croissant sobe +1
+        valortotal = valortotal + Croissant; // o valor do Croissant é adicionado à variavel valortotal
         printf("Boa amigao, aproveite o croissant!!1 \"Esse aqui é croissanto pra qualquer hora!\"\n");
         break;
     case 2:
-        quantidadeBroa_de_Milho++;
+        quantidadeBroa_de_Milho++;  //isso se repete em todo caso
         valortotal = valortotal + Broa_de_Milho;
         printf("Boa amigao, aproveite a broa de milho!!1 \"Broa que não broa, só alegria!\"\n");
         break;
@@ -90,7 +90,8 @@ int resposta;
         printf("Boa amigao, aproveite a rosquinha!!1 \"Rosquinha doce, pra adoçar o dia!\"\n");
         break;
     case 8:
-        quantidadeBiscoito++;valortotal = valortotal + Biscoito;
+        quantidadeBiscoito++;
+        valortotal = valortotal + Biscoito;
         printf("Boa amigao, aproveite o biscoito!!1 \"Biscoito que é biscoito, ninguém recusa!\"\n");
         break;
     case 9:
@@ -114,7 +115,7 @@ int resposta;
      case 100:
     printf("Carrinho possui itens\n");
    if (quantidadeCroissant > 0) {
-    printf("Croissant : %i , Valor R$ : %.2f \n", quantidadeCroissant, (Croissant * quantidadeCroissant));
+    printf("Croissant : %i , Valor R$ : %.2f \n", quantidadeCroissant, (Croissant * quantidadeCroissant)); //calculo do preço total
 }
 
 if (quantidadeBroa_de_Milho > 0) {
@@ -158,27 +159,27 @@ if (quantidadePao_Integral > 0) {
 }
             
         
-    printf("Possui cadastro em nossa padaria? Y = 1/N = 0\n");
+    printf("Possui cadastro em nossa padaria, desconto de 10%%? Y = 1/N = 0\n"); //Pergunta sobre o cadastro e pagamento a vista
     scanf("%i", &resposta);
-    printf("Deseja pagar a vista, decrésimo de 10? Y = 1/N = 0\n");
+    printf("Deseja pagar a vista, desconto de 10%%? Y = 1/N = 0\n");
     scanf("%i", &cadastro);
 
 
-if (resposta == 1 && cadastro == 1){
+if (resposta == 1 && cadastro == 1){ //caso ambos o cadastro e pagamento a vista forem verdade é aplicado o desconto de 20%
         (valortotal = valortotal * 0.8);
     printf("Valor no Carrinho : R$ %.2f \n", valortotal);
-} else if (cadastro = 1){
-    (valortotal = valortotal * 0.9);
+} else if (cadastro = 1){                //caso apenas o cadastro seja verdade é aplicado o desconto de 10%
+    (valortotal = valortotal * 0.9); 
     printf("Valor no Carrinho : R$ %.2f \n", valortotal);
 } else if (cadastro = 0){
     printf("Valor no Carrinho : R$ %.2f \n", valortotal);
-} else if (resposta = 1){
-    (valortotal = valortotal * 0.9);
+} else if (resposta = 1){                //caso apenas o pagamento a vista for escolhido é aplicado o desconto de 10%
+    (valortotal = valortotal * 0.9); 
     printf("Valor no Carrinho : R$ %.2f \n", valortotal);
 } else {
-    printf("Valor no Carrinho : R$ %.2f \n", valortotal);
+    printf("Valor no Carrinho : R$ %.2f \n", valortotal); // se nenhum dos dois forem verdade o valor permanece o mesmo
 } 
-   programa = 0;
+   programa = 0; // usado para finalizar o loop
 break;
         }
 }
