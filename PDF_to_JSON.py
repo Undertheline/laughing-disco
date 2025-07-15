@@ -1,38 +1,36 @@
-from pdfminer.high_level import extract_pages  # Importa a função para extrair páginas do PDF
-from pdfminer.layout import LTTextContainer, LTChar  # Importa classes para identificar blocos de texto e caracteres
-import numpy as np  # Importa o numpy (embora não esteja sendo usado no código)
+from pdfminer.high_level import extract_pages
+from pdfminer.layout import LTTextContainer, LTChar
 
-def extract_bold_text(pdf_path):
-    bold_texts = []  # Inicializa uma lista para armazenar os textos em negrito encontrados
+npode = ("2. ASSUNTOS ADMINISTRATIVOS 1. JUSTIÇA 2. DISCIPLINA 4ª Parte JUSTIÇA E DISCIPLINA DIEGO DA SILVA AGOSTINI - Ten Cel")
 
-    # Itera sobre o layout de cada página do arquivo PDF
+def extract_text_with_bold(pdf_path):
+    results = []
+
     for page_layout in extract_pages(pdf_path):
-        # Itera sobre cada elemento da página (blocos de texto, imagens, etc)
         for element in page_layout:
-            # Verifica se o elemento é um contêiner de texto (LTTextContainer)
             if isinstance(element, LTTextContainer):
-                # Itera sobre cada linha de texto dentro do contêiner
                 for text_line in element:
-                    line_text = ""  # Inicializa string para armazenar o texto em negrito da linha
-                    # Itera sobre cada caractere na linha de texto
+                    full_line = ""
+                    bold_parts = ""
                     for character in text_line:
-                        # Verifica se o objeto é um caractere (LTChar)
                         if isinstance(character, LTChar):
-                            fontname = character.fontname.lower()  # Obtém o nome da fonte em letras minúsculas
-                            # Verifica se o nome da fonte contém "bold" ou "black" (indicação de negrito)
+                            text = character.get_text()
+                            full_line += text
+                            fontname = character.fontname.lower()
                             if "bold" in fontname or "black" in fontname:
-                                line_text += character.get_text()  # Adiciona o caractere ao texto da linha
-                    # Se a linha possui texto em negrito (após remover espaços)
-                    if line_text.strip():
-                        bold_texts.append(line_text.strip())  # Adiciona a linha à lista de textos em negrito
+                                bold_parts += text
+                    if full_line.strip():
+                        results.append({
+                            "full_line": full_line.strip(),
+                            "bold_parts": bold_parts.strip()
+                        })
+    return results
 
-    return bold_texts  # Retorna a lista completa de textos em negrito encontrados no PDF
+# Uso
+lines = extract_text_with_bold("exemplo.pdf")
 
-# Uso da função
-bold_text = extract_bold_text("exemplo.pdf")  # Extrai textos em negrito do arquivo "exemplo.pdf"
-
-# Para cada linha de texto em negrito extraída
-for line in bold_text:
-  with open("texto.txt", "w") as f:
-    for line in bold_text:
-        f.write("*" + line + "*" + "\n")
+for item in lines:
+    if item["full_line"] not in npode:
+        print("Linha completa:", item["full_line"])
+        print("Partes em negrito:", item["bold_parts"])
+        print("---")
