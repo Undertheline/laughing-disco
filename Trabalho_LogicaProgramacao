@@ -1,0 +1,188 @@
+#include <stdio.h>
+
+int main() {
+    int usuario;
+    int programa = 1;
+                            // Nomeação das Variaveis
+float Croissant = 6.50;
+float Broa_de_Milho = 4.00;
+float Sonho = 5.50;
+float Bolo_de_Fuba = 7.00;
+float Coxinha = 6.00;
+float Pao_de_Queijo = 5.00;
+float Rosquinha = 3.50;
+float Biscoito = 4.50;
+float Empada = 6.50;
+float Pao_Frances = 1.20;
+float Pao_Integral = 2.50;
+float valortotal = 0;
+
+int quantidadeCroissant = 0;
+int quantidadeBroa_de_Milho = 0;
+int quantidadeSonho = 0;
+int quantidadeBolo_de_Fuba = 0;
+int quantidadeCoxinha = 0;
+int quantidadePao_de_Queijo = 0;
+int quantidadeRosquinha = 0;
+int quantidadeBiscoito = 0;
+int quantidadeEmpada = 0;
+int quantidadePao_Frances = 0;
+int quantidadePao_Integral = 0;
+int cadastro = 0;
+
+int resposta;
+
+    printf("Lista de Produtos : \n");       //Print da lista de produtos
+            printf("Croissant - Id: 1 - Preço: R$ %.2f \n", Croissant);
+            printf("Broa de Milho - Id: 2 - Preço: R$ %.2f \n", Broa_de_Milho);
+            printf("Sonho - Id: 3 - Preço: R$ %.2f \n", Sonho);
+            printf("Bolo de Fubá - Id: 4 - Preço: R$ %.2f \n", Bolo_de_Fuba);
+            printf("Coxinha - Id: 5 - Preço: R$ %.2f \n", Coxinha);
+            printf("Pão de Queijo - Id: 6 - Preço: R$ %.2f \n", Pao_de_Queijo);
+            printf("Rosquinha - Id: 7 - Preço: R$ %.2f \n", Rosquinha);
+            printf("Biscoito - Id: 8 - Preço: R$ %.2f \n", Biscoito);
+            printf("Empada - Id: 9 - Preço: R$ %.2f \n", Empada);
+            printf("Pão Francês - Id: 10 - Preço: R$ %.2f \n", Pao_Frances);
+            printf("Pão Integral - Id: 11 - Preço: R$ %.2f \n", Pao_Integral);
+    while (programa == 1) { //enquanto o programa estiver em uso, o loop permanece ativo
+        printf("Digite o Id do produto para adicionar ao carrinho.\n");
+        printf("Digite 100 para finalizar a compra.\n Digite 0 para sair da aplicação.");
+        scanf("%d", &usuario);
+
+        switch (usuario) {
+    case 0: //caso o usuario digite 0, o programa é encerrado  
+        programa = 0; 
+        printf("Tchau, volte sempre!\n");
+        break;
+    case 1:                         // Cada produto tem seu id que é informado na tabela de produtos
+        quantidadeCroissant++;          // a quantidade do Croissant sobe +1
+        valortotal = valortotal + Croissant; // o valor do Croissant é adicionado à variavel valortotal
+        printf("Boa amigao, aproveite o croissant!!1 \"Esse aqui é croissanto pra qualquer hora!\"\n");
+        break;
+    case 2:
+        quantidadeBroa_de_Milho++;  //isso se repete em todo caso
+        valortotal = valortotal + Broa_de_Milho;
+        printf("Boa amigao, aproveite a broa de milho!!1 \"Broa que não broa, só alegria!\"\n");
+        break;
+    case 3:
+        quantidadeSonho++;
+        valortotal = valortotal + Sonho;
+        printf("Boa amigao, aproveite o sonho!!1 \"Sonho de padaria, não de princesa!\"\n");
+        break;
+    case 4:
+        quantidadeBolo_de_Fuba++;
+        valortotal = valortotal + Bolo_de_Fuba;
+        printf("Boa amigao, aproveite o bolo de fubá!!1 \"Fubá que é sucesso, nem precisa de manteiga!\"\n");
+        break;
+    case 5:
+        quantidadeCoxinha++;
+        valortotal = valortotal + Coxinha;
+        printf("Boa amigao, aproveite a coxinha!!1 \"Coxinha pra quem quer ser feliz!\"\n");
+        break;
+    case 6:
+        quantidadePao_de_Queijo++;
+        valortotal = valortotal + Pao_de_Queijo;
+        printf("Boa amigao, aproveite o pão de queijo!!1 \"Mineiro que se preze não dispensa pão de queijo!\"\n");
+        break;
+    case 7:
+        quantidadeRosquinha++;
+        valortotal = valortotal + Rosquinha;
+        printf("Boa amigao, aproveite a rosquinha!!1 \"Rosquinha doce, pra adoçar o dia!\"\n");
+        break;
+    case 8:
+        quantidadeBiscoito++;
+        valortotal = valortotal + Biscoito;
+        printf("Boa amigao, aproveite o biscoito!!1 \"Biscoito que é biscoito, ninguém recusa!\"\n");
+        break;
+    case 9:
+        quantidadeEmpada++;
+        valortotal = valortotal + Empada;
+        printf("Boa amigao, aproveite a empada!!1 \"Empada recheada, alegria garantida!\"\n");
+        break;
+    case 10:
+        quantidadePao_Frances++;
+        valortotal = valortotal + Pao_Frances;
+        printf("Boa amigao, aproveite o pão francês!!1 \"Pão francês, orgulho nacional!\"\n");
+        break;
+    case 11:
+        quantidadePao_Integral++;
+        valortotal = valortotal + Pao_Integral;
+        printf("Boa amigao, aproveite o pão integral!!1 \"Integral pra manter a forma, sem perder o sabor!\"\n");
+        break;
+    default:
+        printf("Produto não disponível, mas a amizade é de primeira! :thumbs_up:\n");
+        break;
+     case 100:
+    printf("Carrinho possui itens\n");
+   if (quantidadeCroissant > 0) {
+    printf("Croissant : %i , Valor R$ : %.2f \n", quantidadeCroissant, (Croissant * quantidadeCroissant)); //calculo do preço total
+}
+
+if (quantidadeBroa_de_Milho > 0) {
+    printf("Broa_de_Milho : %i , Valor R$ : %.2f \n", quantidadeBroa_de_Milho, (Broa_de_Milho * quantidadeBroa_de_Milho));
+}
+
+if (quantidadeSonho > 0) {
+    printf("Sonho : %i , Valor R$ : %.2f \n", quantidadeSonho, (Sonho * quantidadeSonho));
+}
+
+if (quantidadeBolo_de_Fuba > 0) {
+    printf("Bolo_de_Fuba : %i , Valor R$ : %.2f \n", quantidadeBolo_de_Fuba, (Bolo_de_Fuba * quantidadeBolo_de_Fuba));
+}
+
+if (quantidadeCoxinha > 0) {
+    printf("Coxinha : %i , Valor R$ : %.2f \n", quantidadeCoxinha, (Coxinha * quantidadeCoxinha));
+}
+
+if (quantidadePao_de_Queijo > 0) {
+    printf("Pao_de_Queijo : %i , Valor R$ : %.2f \n", quantidadePao_de_Queijo, (Pao_de_Queijo * quantidadePao_de_Queijo));
+}
+
+if (quantidadeRosquinha > 0) {
+    printf("Rosquinha : %i , Valor R$ : %.2f \n", quantidadeRosquinha, (Rosquinha * quantidadeRosquinha));
+}
+
+if (quantidadeBiscoito > 0) {
+    printf("Biscoito : %i , Valor R$ : %.2f \n", quantidadeBiscoito, (Biscoito * quantidadeBiscoito));
+}
+
+if (quantidadeEmpada > 0) {
+    printf("Empada : %i , Valor R$ : %.2f \n", quantidadeEmpada, (Empada * quantidadeEmpada));
+}
+
+if (quantidadePao_Frances > 0) {
+    printf("Pao_Frances : %i , Valor R$ : %.2f \n", quantidadePao_Frances, (Pao_Frances * quantidadePao_Frances));
+}
+
+if (quantidadePao_Integral > 0) {
+    printf("Pao_Integral : %i , Valor R$ : %.2f \n", quantidadePao_Integral, (Pao_Integral * quantidadePao_Integral));
+}
+            
+        
+    printf("Possui cadastro em nossa padaria, desconto de 10%%? Y = 1/N = 0\n"); //Pergunta sobre o cadastro e pagamento a vista
+    scanf("%i", &resposta);
+    printf("Deseja pagar a vista, desconto de 10%%? Y = 1/N = 0\n");
+    scanf("%i", &cadastro);
+
+
+if (resposta == 1 && cadastro == 1){ //caso ambos o cadastro e pagamento a vista forem verdade é aplicado o desconto de 20%
+        (valortotal = valortotal * 0.8);
+    printf("Valor no Carrinho : R$ %.2f \n", valortotal);
+} else if (cadastro = 1){                //caso apenas o cadastro seja verdade é aplicado o desconto de 10%
+    (valortotal = valortotal * 0.9); 
+    printf("Valor no Carrinho : R$ %.2f \n", valortotal);
+} else if (cadastro = 0){
+    printf("Valor no Carrinho : R$ %.2f \n", valortotal);
+} else if (resposta = 1){                //caso apenas o pagamento a vista for escolhido é aplicado o desconto de 10%
+    (valortotal = valortotal * 0.9); 
+    printf("Valor no Carrinho : R$ %.2f \n", valortotal);
+} else {
+    printf("Valor no Carrinho : R$ %.2f \n", valortotal); // se nenhum dos dois forem verdade o valor permanece o mesmo
+} 
+   programa = 0; // usado para finalizar o loop
+break;
+        }
+}
+    printf("Boa noite, tenha um bom dia!!1 Volte sempre\n");
+    return 0;
+}
