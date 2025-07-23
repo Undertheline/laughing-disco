@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        text-align: center;
+        padding-top: 200px;
+    }
+</style>
+<script>
+let carros = ['Civic','Kombi','Chevette','Toyota Corolla Splinter Trueno'];
+
+function insere(){
+    if (novocarro.value != "" || carros.includes(novocarro.value) == true){ 
+carros.push(novocarro.value);
+document.getElementById("novocarro").value = "";
+mostrar();
+document.getElementById("novocarro").focus();
+    } else {
+        alert("Insira o Nome de um Carro");
+        document.getElementById("novocarro").focus();
+
+    }
+}
+function mostrar(){
+    document.getElementById("tela").innerHTML = carros;
+}
+
+</script>
+
+<body onload=mostrar()>
+    <label for="novocarro"> Insira o nome de um carro</label>
+    <input type="text" id="novocarro">
+    <input type="button" value="Inserir" onclick=insere()>
+    <br><br>
+    <p id="tela"></p>
+
+</body>
+</html>
