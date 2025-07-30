@@ -1,0 +1,279 @@
+<html lang="pt-br"><head>
+<meta http-equiv="content-type" content="text/html; charset=windows-1252">
+        <!--<link href="https://gp.badmqgex.eb.mil.br/css/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://gp.badmqgex.eb.mil.br/css/font-awesome/css/fontawesome-all.css" rel="stylesheet">
+<link href="https://gp.badmqgex.eb.mil.br/css/bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet">
+<link href="https://gp.badmqgex.eb.mil.br/css/jasny-bootstrap/css/jasny-bootstrap.min.css" rel="stylesheet">
+<link href="https://gp.badmqgex.eb.mil.br/scripts/chosen/chosen.min.css" rel="stylesheet">
+<link href="https://gp.badmqgex.eb.mil.br/scripts/chosen/docsupport/prism.css" rel="stylesheet">
+<link href="https://gp.badmqgex.eb.mil.br/scripts/jquery-ui/jquery-ui.min.css" media="screen" rel="stylesheet" style type="text/css">
+<link href="https://gp.badmqgex.eb.mil.br/includes/css/layout.css" media="screen" rel="stylesheet" style type="text/css">
+<link href="https://gp.badmqgex.eb.mil.br/includes/css/layout.css" media="print" rel="stylesheet" style type="text/css">
+<link href="https://gp.badmqgex.eb.mil.br/includes/css/layout.css" media="handheld" rel="stylesheet" style type="text/css">-->
+<!--<link rel="stylesheet" href="https://gp.badmqgex.eb.mil.br/css/style.css">-->
+
+
+<link href="Gest%C3%A3o%20de%20Pessoal_arquivos/bootstrap.min.css" rel="stylesheet">
+<link href="Gest%C3%A3o%20de%20Pessoal_arquivos/fontawesome-all.css" rel="stylesheet">
+<link href="Gest%C3%A3o%20de%20Pessoal_arquivos/bootstrap-responsive.min.css" rel="stylesheet">
+<link href="Gest%C3%A3o%20de%20Pessoal_arquivos/jasny-bootstrap.min.css" rel="stylesheet">
+<link href="Gest%C3%A3o%20de%20Pessoal_arquivos/chosen.min.css" rel="stylesheet">
+<link href="Gest%C3%A3o%20de%20Pessoal_arquivos/prism.css" rel="stylesheet">
+
+<link rel="stylesheet" style="" type="text/css" href="Gest%C3%A3o%20de%20Pessoal_arquivos/layout.css" media="screen">
+<link rel="stylesheet" style="" type="text/css" href="Gest%C3%A3o%20de%20Pessoal_arquivos/layout.css" media="print">
+<link rel="stylesheet" style="" type="text/css" href="Gest%C3%A3o%20de%20Pessoal_arquivos/layout.css" media="handheld">
+
+<link rel="stylesheet" style="" type="text/css" href="Gest%C3%A3o%20de%20Pessoal_arquivos/jquery-ui.min.css" media="screen">
+<link rel="stylesheet" style="" type="text/css" href="Gest%C3%A3o%20de%20Pessoal_arquivos/jquery-ui.min.css" media="print">
+<link rel="stylesheet" style="" type="text/css" href="Gest%C3%A3o%20de%20Pessoal_arquivos/jquery-ui.min.css" media="handheld">
+        <meta charset="ISO-8859-1">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="shortcut icon" type="image/x-icon" href="https://gp.badmqgex.eb.mil.br/images/brasao_base_border.ico" style="height: 16px; width: 16px;">
+
+
+
+<title>Gestão de Pessoal</title>
+
+
+</head><body><div class="navbar-inner">
+
+    <span class="brand">
+        <center>
+            <table class="table-sistema">
+                <tbody><tr>
+                    <td style="font-size: 14px;text-align: center;"><img src="" style="width: 30px; height: 40px;">
+                        <br><span><b><br>()</b></span></td>
+                </tr>
+            </tbody></table>
+        </center>
+    </span>
+</div>
+
+
+
+
+
+    <script async="" src="Gest%C3%A3o%20de%20Pessoal_arquivos/matomo.js"></script><script>
+                        var _paq = window._paq = window._paq || []; // Inicializa o rastreador Matomo.
+
+                        var navegador = navigator.userAgent; // Coleta o navegador do usuÃ¡rio.
+                        var ip = "10.40.0.165"; // Pega a variÃ¡vel do Nginx (IP ou usuÃ¡rio).
+                        var userId = ip + "_" + navegador; // Cria um ID de usuÃ¡rio Ãºnico.
+
+                        _paq.push(["setUserId", userId]); // Define o ID do usuÃ¡rio no Matomo.
+                        _paq.push(["enableLinkTracking"]); // Habilita o rastreamento de cliques em links.
+
+                        // Bloco para rastrear pesquisas internas no site
+                        try {
+                                var parametroDaBusca = "q";
+                                var urlParams = new URLSearchParams(window.location.search);
+                                if (urlParams.has(parametroDaBusca)) {
+                                        var termoPesquisado = urlParams.get(parametroDaBusca);
+                                        if (termoPesquisado) {
+                                                _paq.push(["trackSiteSearch", termoPesquisado]); // Envia o termo pesquisado para o Matomo.
+                                        }
+                                }
+                        } catch (e) {}
+
+                        _paq.push(["trackPageView"]); // Rastreia a visualizaÃ§Ã£o desta pÃ¡gina.
+                        _paq.push(["enableHeartBeatTimer"]); // Mede com mais precisÃ£o o tempo do usuÃ¡rio na pÃ¡gina.
+                        _paq.push(["trackPagePerformanceMetrics"]); // Coleta mÃ©tricas de desempenho do carregamento.
+
+                        // Coleta manual de performance para garantir o dado
+                        window.addEventListener("load", function () {
+                                try {
+                                        var perf = window.performance.timing;
+                                        var tempo = perf.loadEventEnd - perf.navigationStart;
+                                        if (tempo > 0 && tempo < 60000) {
+                                                _paq.push(["trackEvent", "Performance", "Tempo de carregamento", document.location.pathname, tempo]);
+                                        }
+                                } catch (e) {}
+                        });
+
+                        // ConfiguraÃ§Ã£o final e carregamento do script matomo.js
+                        (function() {
+                                var u = "//matomo.7cta.eb.mil.br/";
+                                _paq.push(["setTrackerUrl", u + "matomo.php"]);
+                                _paq.push(["setSiteId", "281"]);
+                                var d = document, g = d.createElement("script"), s = d.getElementsByTagName("script")[0];
+                                g.async = true; g.src = u + "matomo.js";
+                                s.parentNode.insertBefore(g, s);
+                        })();
+                </script>
+    
+        <header>
+
+        </header>
+        <div style="background-color: white">
+
+            <div class="container-fluid">
+                <div align="center"><span class="titulo"><h4>Simulador de TAF </h4></span>
+    <table>
+        <tbody><tr>
+            <td>
+                <form class="form-horizontal" id="form_simulador_taf" method="POST" name="form_simulador_taf" action="calcula-simulador-taf">
+                    <div class="control-group">
+                        <label class="control-label" for="idade">Idade</label>
+                        <div class="controls">
+                            <input type="text" name="idade" id="idade" maxlength="2" style="width: 80!important;text-transform: uppercase!important;">
+                        </div>
+                    </div>
+                    <div class="control-group">
+                        <label class="control-label" for="segmento">Segmento</label>
+                        <div class="controls">
+                            <select name="segmento" id="segmento" style="width: 80!important;text-transform: uppercase!important;">
+                                <option value="M" selected="selected">M</option>
+                                <option value="F">F</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="control-group">
+                        <label class="control-label" for="padrao">Padrão</label>
+                        <div class="controls">
+                            <select name="padrao" id="padrao" style="width: 80!important;text-transform: uppercase!important;">
+                                <option value="PBD" selected="selected">PBD</option>
+                                <option value="PAD">PAD</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="control-group">
+                        <label class="control-label" for="barra">Barra</label>
+                        <div class="controls">
+                            <input type="text" name="barra" id="barra" maxlength="2" style="width: 80!important;text-transform: uppercase!important;">
+                        </div>
+                    </div>
+                    <div class="control-group">
+                        <label class="control-label" for="flexao">Flexão</label>
+                        <div class="controls">
+                            <input type="text" name="flexao" id="flexao" maxlength="2" style="width: 80!important;text-transform: uppercase!important;">
+                        </div>
+                    </div>
+                    <div class="control-group">
+                        <label class="control-label" for="abdominal">Abdominal</label>
+                        <div class="controls">
+                            <input type="text" name="abdominal" id="abdominal" maxlength="3" style="width: 80!important;text-transform: uppercase!important;">
+                        </div>
+                    </div>
+                    <div class="control-group">
+                        <label class="control-label" for="corrida">Corrida</label>
+                        <div class="controls">
+                            <input type="text" name="corrida" id="corrida" maxlength="4" style="width: 80!important;text-transform: uppercase!important;">
+                        </div>
+
+                    </div>
+                </form>
+            </td>
+            <td>
+                <img src="Gest%C3%A3o%20de%20Pessoal_arquivos/corrida.gif">
+                <img src="Gest%C3%A3o%20de%20Pessoal_arquivos/barra.gif">&nbsp;
+                <br>
+                <img src="Gest%C3%A3o%20de%20Pessoal_arquivos/flexao.gif">
+                <img src="Gest%C3%A3o%20de%20Pessoal_arquivos/abdominal.gif">
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2" style="text-align: center!important;">
+                <button class="btn btn-primary" onclick="(window.location.href='simulador-taf')">Limpar Campos</button>
+                <button class="btn btn-primary" onclick="$('#form_simulador_taf').submit()">Calcular</button>
+            </td>
+        </tr>
+    </tbody></table>
+    <br>
+
+    </div>
+            </div>
+
+        </div>
+        <footer class="container-fluid">
+            <center>
+    <div class="container-fluid footer row-fluid">
+    <div class="span3">
+        <div class="list-group">
+            <div class="list-group-item">
+                <h4 class="list-group-item-heading">B Adm QGEx</h4>
+                <p class="list-group-item-text">
+                    <img src="Gest%C3%A3o%20de%20Pessoal_arquivos/alt=.html" "="" style="width: 12px; height: 15px;">&nbsp;&nbsp;&nbsp;                </p>
+            </div>
+            <div class="list-group-item">
+                <p class="list-group-item-text">
+                    <span class="fa fa-map-marker"></span>                 </p>
+            </div>
+            <div class="list-group-item">
+                <p class="list-group-item-text">
+                    <a href="tel:+55"><span class="fa fa-phone"></span> </a>
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="span3">
+        <div class="list-group">
+            <div class="list-group-item">
+                <h4 class="list-group-item-heading">Div TI</h4>
+                <p class="list-group-item">
+                    Divisão de Tecnologia da Informação
+                </p>
+            </div>
+            <div class="list-group-item">
+                <p class="list-group-item-text">
+                    Sugestões para o sistema
+                </p>
+            </div>
+            <div class="list-group-item">
+                <p class="list-group-item-text">
+                    <span class="fa fa-envelope"></span> <a href="mailto:dti.sistemas@badmqgex.eb.mil.br">dti.sistemas@badmqgex.eb.mil.br</a>
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="span3">
+        <div class="list-group">
+            <div class="list-group-item">
+                <h4 class="list-group-item-heading">Links</h4>
+                <p class="list-group-item-text">
+                    <a href="http://" target="_blank"><span class="fa fa-share-square"></span> Nossa página na EB Net </a>
+                </p>
+                <p class="list-group-item-text">
+                    <a href="http://" target="_blank"><span class="fa fa-share-square"></span> Nossa página na Internet </a>
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="span3">
+        <div class="list-group">
+            <div class="list-group-item">
+                <h4 class="list-group-item-heading">Sistema de Gestão de Pessoal</h4>
+                <p class="list-group-item-text">
+                    <i class="fa fa-copyright"></i> 2018 <b>B Adm QGEx</b> <br>
+                    Todos os direitos reservados. <br>
+                    Desenvolvido por <a href="mailto:ivanbenazzi@hotmail.com"><strong>Cap BENAZZI</strong></a>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+</center>
+
+
+<!--<script type="text/javascript" language="javascript" src="https://gp.badmqgex.eb.mil.br/scripts/jquery.min.js"></script>
+<script type="text/javascript" language="javascript" src="https://gp.badmqgex.eb.mil.br/scripts/jquery-ui/jquery-ui.js"></script>
+<script type="text/javascript" language="javascript" src="https://gp.badmqgex.eb.mil.br/css/bootstrap/js/bootstrap.min.js"></script>
+<script type="text/javascript" language="javascript" src="https://gp.badmqgex.eb.mil.br/css/jasny-bootstrap/js/jasny-bootstrap.min.js"></script>
+<script type="text/javascript" language="javascript" src="https://gp.badmqgex.eb.mil.br/scripts/scripts.js"></script>
+<script type="text/javascript" language="javascript" src="https://gp.badmqgex.eb.mil.br/scripts/jquery-mask/src/jquery.mask.js"></script>
+<script type="text/javascript" language="javascript" src="https://gp.badmqgex.eb.mil.br/scripts/chosen/chosen.jquery.min.js"></script>
+<script type="text/javascript" language="javascript" src="https://gp.badmqgex.eb.mil.br/scripts/chosen/docsupport/prism.js"></script>
+<script type="text/javascript" language="javascript" src="https://gp.badmqgex.eb.mil.br/includes/js/funcoes.js"></script>-->
+
+
+<script type="text/javascript" language="javascript" src="Gest%C3%A3o%20de%20Pessoal_arquivos/jquery.min.js"></script>
+<script type="text/javascript" language="javascript" src="Gest%C3%A3o%20de%20Pessoal_arquivos/jquery-ui.js"></script>
+<script type="text/javascript" language="javascript" src="Gest%C3%A3o%20de%20Pessoal_arquivos/bootstrap.min.js"></script>
+<script type="text/javascript" language="javascript" src="Gest%C3%A3o%20de%20Pessoal_arquivos/jasny-bootstrap.min.js"></script>
+<script type="text/javascript" language="javascript" src="Gest%C3%A3o%20de%20Pessoal_arquivos/jquery.mask.js"></script>
+<script type="text/javascript" language="javascript" src="Gest%C3%A3o%20de%20Pessoal_arquivos/chosen.jquery.min.js"></script>
+<script type="text/javascript" language="javascript" src="Gest%C3%A3o%20de%20Pessoal_arquivos/prism.js"></script>
+<script type="text/javascript" language="javascript" src="Gest%C3%A3o%20de%20Pessoal_arquivos/scripts.js"></script>        </footer>
+    
+</body></html>
