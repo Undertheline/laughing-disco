@@ -5,15 +5,43 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-<script>
+<style>
+    div{
+        padding-top: 10%;
+        text-align: center;
+    }
+    p{
+        padding: 0%;
+    }
+</style>
 
+<script>
+let pessoa={
+    nome:'rogerio',
+    idade:'19',
+    genero:'indefinido'
+}
+console.log(pessoa);
 
 </script>
 
-
-
 <body>
-    <div id="pessoadiv">massa</div>
-    
+    <div>
+        <br>
+        <label for="nomei"> Seu Nome : </label>
+        <input type="text" name="nomei" id="nomei">
+        <br>
+        <label for="idadei"> Sua Idade : </label>
+        <input type="text" name="idadei" id="idadei">
+        <br>
+        <label for="generei"> Seu Gênero : </label>
+        <input type="text" name="generei" id="generei">
+    </div>
+    <div>Bem Vinda! <br>
+        <p id="nome"> nome</p> 
+        <p id="idade"> idade</p>
+        <p id="genero"> genero</p>
+    </div>
+
 </body>
 </html>
